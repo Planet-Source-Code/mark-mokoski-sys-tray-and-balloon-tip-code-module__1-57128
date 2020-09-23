@@ -1,0 +1,363 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>How To Use Icons with the Windows 95/98/Me Taskbar Notification Area</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:24.0pt;
+	font-family:"Times New Roman";}
+h2
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman";}
+h3
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:13.5pt;
+	font-family:"Times New Roman";}
+h5
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+code
+	{font-family:"Courier New";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<h1>How To Use Icons with the Windows 95/98/Me Taskbar Notification Area</h1>
+
+<table class=MsoNormalTable border=0 cellpadding=0>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Article ID</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>:</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>149276</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Last Review</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>:</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>July 13, 2004</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Revision</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>:</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>1.0</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>This article was previously published under Q149276</p>
+
+<h5>On this Page</h5>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;149276#kb1#kb1"><span
+  style='text-decoration:none'><img border=0 width=10 height=10
+  src="How%20To%20Use%20Icons%20with%20the%20Windows%2095_files/image001.gif"
+  alt=SUMMARY align=middle></span></a></p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;149276#kb1#kb1">SUMMARY</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;149276#kb2#kb2"><span
+  style='text-decoration:none'><img border=0 width=10 height=10
+  src="How%20To%20Use%20Icons%20with%20the%20Windows%2095_files/image001.gif"
+  alt="MORE INFORMATION" align=middle></span></a></p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;149276#kb2#kb2">MORE
+  INFORMATION</a></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;149276#kb3#kb3"><span
+  style='text-decoration:none'><img border=0 width=10 height=10
+  src="How%20To%20Use%20Icons%20with%20the%20Windows%2095_files/image001.gif"
+  alt=REFERENCES align=middle></span></a></p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;149276#kb3#kb3">REFERENCES</a></p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name=kb1>SUMMARY</a></h2>
+
+<p class=MsoNormal>The Windows API provides the ability to add, modify, and
+remove icons from the System Tray, or Taskbar Notification Area, available in
+the Windows 95, Windows 98, Windows Me, Windows NT 4.0, and Windows 2000 shell.
+This functionality can be provided using only the Shell_NotifyIcon function
+that is exported by Shell32.dll. This API function also provides the ability to
+specify a text string for the ToolTip that is displayed when a user pauses with
+the mouse pointer over the icon. The step-by-step example in this article
+creates a Visual Basic program which demonstrates how to use this API function.<br>
+<br>
+The ability to take some action if the icon in the Taskbar Notification Area is
+clicked depends on a callback function. Because Visual Basic 4.0 does not
+support callback functions directly, there is no way to show a form or execute
+some code using solely Visual Basic 4.0. This functionality was added in Visual
+Basic 5.0 (and later) with the addition of the AddressOf operator. A number of
+options are available to Visual Basic 4.0 developers that can provide callback
+functionality, including the Message Blaster OCX, the OCX mentioned in the
+Microsoft Systems Journal article noted in the &quot;References&quot; section
+of this article, or the Callback OLE server that is detailed in Bruce
+McKinney's book, <i>Hardcore Visual Basic</i>. For more information on any of
+these options, see the &quot;References&quot; section. Because these products
+do not include Visual Basic, Microsoft Product Support Services does not
+support their use. </p>
+
+<h2><a name=kb2>MORE INFORMATION</a></h2>
+
+<p class=MsoNormal>The following example creates a one-form Visual Basic
+project that shows how to use the Shell_NotifyIcon API function. </p>
+
+<h3>Step-by-Step Example</h3>
+
+<table class=MsoNormalTable border=0 cellpadding=0>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>1.</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Start Visual Basic. Form1 is created by default.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>2.</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Change the form's icon property to the icon that should be
+  shown in the Taskbar Notification Area.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>3.</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Draw three CommandButtons onto the form.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>4.</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Select Module from the Insert menu to add a single code
+  module to the project.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>5.</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Add the following code, consisting of function, type, and
+  constant declarations, to Module1:</p>
+  <pre>      Type NOTIFYICONDATA</pre><pre>          cbSize As Long</pre><pre>          hWnd As Long</pre><pre>          uID As Long</pre><pre>          uFlags As Long</pre><pre>          uCallbackMessage As Long</pre><pre>          hIcon As Long</pre><pre>          szTip As String * 64</pre><pre>      End Type</pre><pre>&nbsp;</pre><pre>      Global Const NIM_ADD = 0</pre><pre>      Global Const NIM_MODIFY = 1</pre><pre>      Global Const NIM_DELETE = 2</pre><pre>      Global Const NIF_MESSAGE = 1</pre><pre>      Global Const NIF_ICON = 2</pre><pre>      Global Const NIF_TIP = 4</pre><pre>&nbsp;</pre><pre>      Declare Function Shell_NotifyIconA Lib &quot;SHELL32&quot; _</pre><pre>      (ByVal dwMessage As Long,  lpData As NOTIFYICONDATA) As Integer</pre><pre>                                      </pre></td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>6.</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The following code is a function that takes the parameters
+  that need to be set for the NOTIFYICONDATA type and returns a variable of
+  this type. Add to Form1:</p>
+  <pre>      Private Function setNOTIFYICONDATA(hWnd As Long, ID As Long, _</pre><pre>          Flags As Long, CallbackMessage As Long, Icon As Long, _</pre><pre>          Tip As String) As NOTIFYICONDATA</pre><pre>&nbsp;</pre><pre>          Dim nidTemp As NOTIFYICONDATA</pre><pre>&nbsp;</pre><pre>          nidTemp.cbSize = Len(nidTemp)</pre><pre>          nidTemp.hWnd = hWnd</pre><pre>          nidTemp.uID = ID</pre><pre>          nidTemp.uFlags = Flags</pre><pre>          nidTemp.uCallbackMessage = CallbackMessage</pre><pre>          nidTemp.hIcon = Icon</pre><pre>          nidTemp.szTip = Tip &amp; Chr$(0)</pre><pre>&nbsp;</pre><pre>          setNOTIFYICONDATA = nidTemp</pre><pre>      End Function</pre><pre>                                      </pre></td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>7.</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The three procedures in this block of code call the
+  function created in step 5 to add, modify, and remove Taskbar Notification
+  Area icons. Add this code to Form1 also:</p>
+  <pre>      Private Sub Command1_Click()</pre><pre>          'Add an icon.  This procedure uses the icon specified in</pre><pre>          'the Icon property of Form1. This can be modified as desired.</pre><pre>&nbsp;</pre><pre>          Dim i As Integer</pre><pre>          Dim s As String</pre><pre>          Dim nid As NOTIFYICONDATA</pre><pre>&nbsp;</pre><pre>          s = InputBox(&quot;Enter string:&quot;)</pre><pre>          nid = setNOTIFYICONDATA(hWnd:=Form1.hWnd, _</pre><pre>                                  ID:=vbNull, _</pre><pre>                                  Flags:=NIF_MESSAGE Or NIF_ICON _</pre><pre>                                  Or NIF_TIP, _</pre><pre>                                  CallbackMessage:=vbNull, _</pre><pre>                                  Icon:=Form1.Icon, _</pre><pre>                                  Tip:=s)</pre><pre>&nbsp;</pre><pre>             i = Shell_NotifyIconA(NIM_ADD, nid)</pre><pre>         End Sub</pre><pre>&nbsp;</pre><pre>         Private Sub Command2_Click()</pre><pre>             'Modify an existing icon. This procedure uses the icon</pre><pre>             'specified in the Icon property of Form1. This can be modified</pre><pre>             'as desired.</pre><pre>&nbsp;</pre><pre>             Dim i As Integer</pre><pre>             Dim s As String</pre><pre>             Dim nid As NOTIFYICONDATA</pre><pre>&nbsp;</pre><pre>             s = InputBox(&quot;Enter string:&quot;)</pre><pre>             nid = setNOTIFYICONDATA(hWnd:=Form1.hWnd, _</pre><pre>                                     ID:=vbNull, _</pre><pre>                                     Flags:=NIF_MESSAGE Or NIF_ICON _</pre><pre>                                     Or NIF_TIP, _</pre><pre>                                     CallbackMessage:=vbNull, _</pre><pre>                                     Icon:=Form1.Icon, _</pre><pre>                                     Tip:=s)</pre><pre>&nbsp;</pre><pre>             i = Shell_NotifyIconA(NIM_MODIFY, nid)</pre><pre>         End Sub</pre><pre>&nbsp;</pre><pre>         Private Sub Command3_Click()</pre><pre>             'Delete an existing icon.</pre><pre>&nbsp;</pre><pre>             Dim i As Integer</pre><pre>             Dim nid As NOTIFYICONDATA</pre><pre>&nbsp;</pre><pre>          nid = setNOTIFYICONDATA(hWnd:=Form1.hWnd, _</pre><pre>                                  ID:=vbNull, _</pre><pre>                                  Flags:=NIF_MESSAGE Or NIF_ICON _</pre><pre>                                  Or NIF_TIP, _</pre><pre>                                  CallbackMessage:=vbNull, _</pre><pre>                                  Icon:=Form1.Icon, _</pre><pre>                                  Tip:=&quot;&quot;)</pre><pre>&nbsp;</pre><pre>          i = Shell_NotifyIconA(NIM_DELETE, nid)</pre><pre>      End Sub</pre><pre>                                      </pre></td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>8.</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Press the F5 key or select Start from the Run menu to run
+  the application. Click the first button and enter a text string to add an
+  icon. Click the second button to modify an existing icon, and the third to
+  delete the icon.</p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name=kb3>REFERENCES</a></h2>
+
+<p class=MsoNormal><i>Hardcore Visual Basic</i>, Bruce McKinney, Microsoft
+Press 1995.<br>
+<br>
+Microsoft Win32 SDK, Shell_NotifyIcon and NOTIFYICONDATA.<br>
+<br>
+Microsoft Systems Journal, February 1996, The Visual Programmer, page 93.<br>
+<br>
+Visual Basic Programmer's Journal, March 1996, Q&amp;A, page 136.<br>
+<br>
+For additional information, click the article number below to view the article
+in the Microsoft Knowledge Base: </p>
+
+<p class=MsoNormal><a href="http://support.microsoft.com/kb/162613/EN-US/">162613</a>
+How To Manipulate Icons in the System Tray with Visual Basic </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<h5>APPLIES TO</h5>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•</p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 4.0 Standard Edition</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•</p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 4.0 Professional Edition</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•</p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 4.0 32-Bit Enterprise Edition</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•</p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 5.0 Learning Edition</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•</p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 6.0 Learning Edition</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•</p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 5.0 Professional Edition</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•</p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 6.0 Professional Edition</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•</p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 5.0 Enterprise Edition</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•</p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 6.0 Enterprise Edition</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
