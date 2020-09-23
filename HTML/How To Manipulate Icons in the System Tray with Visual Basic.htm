@@ -1,0 +1,618 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List
+href="How%20To%20Manipulate%20Icons%20in%20the%20System%20Tray%20with%20Visual%20Basic_files/filelist.xml">
+<link rel=Edit-Time-Data
+href="How%20To%20Manipulate%20Icons%20in%20the%20System%20Tray%20with%20Visual%20Basic_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>How To Manipulate Icons in the System Tray with Visual Basic</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="Street"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="address"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="date"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Mark Mokoski</o:Author>
+  <o:LastAuthor>Mark Mokoski</o:LastAuthor>
+  <o:Revision>1</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
+  <o:Created>2004-11-26T13:49:00Z</o:Created>
+  <o:LastSaved>2004-11-26T13:50:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2363</o:Words>
+  <o:Characters>13473</o:Characters>
+  <o:Company>C &amp; M Telephone</o:Company>
+  <o:Lines>112</o:Lines>
+  <o:Paragraphs>31</o:Paragraphs>
+  <o:CharactersWithSpaces>15805</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman";}
+h2
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman";}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman";}
+h5
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+code
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1>How To Manipulate Icons in the System Tray with Visual Basic<o:p></o:p></h1>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Article ID<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>:<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>162613<o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Last Review<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>:<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><st1:date Year="2004" Day="15" Month="7">July 15, 2004</st1:date><o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Revision<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>:<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>1.0<o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>This article was previously published under Q162613<o:p></o:p></p>
+
+<h5>On this Page<o:p></o:p></h5>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='mso-cellspacing:0in;mso-padding-alt:0in 0in 0in 0in'>
+ <tr style='mso-yfti-irow:0'>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;162613#kb1#kb1"><span
+  style='text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shapetype
+   id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+   path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" alt="SUMMARY"
+   href="http://support.microsoft.com/default.aspx?scid=kb;en-us;162613#kb1#kb1"
+   style='width:7.5pt;height:7.5pt' o:button="t">
+   <v:imagedata src="How%20To%20Manipulate%20Icons%20in%20the%20System%20Tray%20with%20Visual%20Basic_files/image001.gif"
+    o:href="http://support.microsoft.com/library/images/support/kbgraphics/downArrow.gif"/>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'><img
+  border=0 width=10 height=10
+  src="How%20To%20Manipulate%20Icons%20in%20the%20System%20Tray%20with%20Visual%20Basic_files/image001.gif"
+  alt=SUMMARY align=middle v:shapes="_x0000_i1025"></span><![endif]></span></a><o:p></o:p></p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;162613#kb1#kb1">SUMMARY</a><o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;162613#kb2#kb2"><span
+  style='text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1026" type="#_x0000_t75" alt="MORE INFORMATION"
+   href="http://support.microsoft.com/default.aspx?scid=kb;en-us;162613#kb2#kb2"
+   style='width:7.5pt;height:7.5pt' o:button="t">
+   <v:imagedata src="How%20To%20Manipulate%20Icons%20in%20the%20System%20Tray%20with%20Visual%20Basic_files/image001.gif"
+    o:href="http://support.microsoft.com/library/images/support/kbgraphics/downArrow.gif"/>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'><img
+  border=0 width=10 height=10
+  src="How%20To%20Manipulate%20Icons%20in%20the%20System%20Tray%20with%20Visual%20Basic_files/image001.gif"
+  alt="MORE INFORMATION" align=middle v:shapes="_x0000_i1026"></span><![endif]></span></a><o:p></o:p></p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;162613#kb2#kb2">MORE
+  INFORMATION</a><o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;162613#kb3#kb3"><span
+  style='text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1027" type="#_x0000_t75" alt="REFERENCES"
+   href="http://support.microsoft.com/default.aspx?scid=kb;en-us;162613#kb3#kb3"
+   style='width:7.5pt;height:7.5pt' o:button="t">
+   <v:imagedata src="How%20To%20Manipulate%20Icons%20in%20the%20System%20Tray%20with%20Visual%20Basic_files/image001.gif"
+    o:href="http://support.microsoft.com/library/images/support/kbgraphics/downArrow.gif"/>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'><img
+  border=0 width=10 height=10
+  src="How%20To%20Manipulate%20Icons%20in%20the%20System%20Tray%20with%20Visual%20Basic_files/image001.gif"
+  alt=REFERENCES align=middle v:shapes="_x0000_i1027"></span><![endif]></span></a><o:p></o:p></p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;162613#kb3#kb3">REFERENCES</a><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name=kb1>SUMMARY</a><o:p></o:p></h2>
+
+<p class=MsoNormal>One of the new features of the Windows 95, Windows 98,
+Windows Me, Windows NT 4.0, and Windows 2000 user interface is the taskbar
+status area. This article demonstrates how to use Visual Basic to add, modify,
+and delete status or notification indicators in the taskbar status area. <o:p></o:p></p>
+
+<h2><a name=kb2>MORE INFORMATION</a><o:p></o:p></h2>
+
+<p class=MsoNormal>The taskbar status area is located to the right of the Start
+button, and provides you with status or notification indicators about your
+programs. Icons with ToolTips are typically used as indicators in the taskbar
+status area. The following are some examples of how to use the taskbar status
+area: <o:p></o:p></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>•<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>You can adjust the consumption level of your laptop's
+  batteries by clicking a vertical graph in the taskbar status area and
+  adjusting it in the window that appears. The graph indicates the amount of
+  power left in your laptop computer's batteries. <o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>•<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>You can track your favorite stock by creating an icon that
+  changes when your stock changes price. Click the icon to display a chart of
+  the stock. <o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>•<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>You can adjust the volume control on a multimedia device
+  by clicking the icon and displaying more controls. <o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>To manipulate an icon in the taskbar status area, use the
+Windows API function Shell_NotifyIcon in the Shell32.dll file. This function
+allows you to add, modify, delete, set a ToolTip string, and send a callback
+message to execute mouse events. Visual Basic versions 4.0 and earlier do not
+directly accept callback messages or functions. However, there are three ways
+to work around this limitation: <o:p></o:p></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>1.<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The <st1:Street><st1:address>Hard Way</st1:address></st1:Street>:
+  Create a control that accepts callbacks. Refer to the Microsoft Systems
+  Journal article cited in the References section of this article for a way to
+  create a control that accepts callbacks. To create this control, you need
+  Visual C++. <o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>2.<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The <st1:Street><st1:address>Easy Way</st1:address></st1:Street>:
+  Use a third-party control that intercepts messages, such as the Message
+  Blaster control. <o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>3.<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>The <st1:Street><st1:address>Simple Way</st1:address></st1:Street>:
+  Use a Visual Basic intrinsic control to serve as a Window that reacts to the
+  callback message. This article contains a sample program that uses this
+  method. With this method, you want to use an event in a control that is
+  rarely used. The event will be exclusively used to process the callback
+  message. <o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>In Visual Basic 5.0 and later, you can use the AddressOf
+Operator to call callback functions. <br>
+<br>
+The next section explains the Shell_NotifyIcon function and the requirements to
+use this function. <o:p></o:p></p>
+
+<h3>Shell_NotifyIcon Function<o:p></o:p></h3>
+
+<p class=MsoNormal>You use the Shell_NotifyIcon function to send a message to a
+system to add, modify, or delete an icon from the taskbar status area. The
+function returns True if the message is sent successfully or False if the
+function is unsuccessful. The arguments of the functions are as follows: <o:p></o:p></p>
+
+<pre><span style='mso-spacerun:yes'>   </span>dwMessage: A message to execute an action. This parameter can be one of<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>the following values:<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>NIM_ADD: Adds an icon to the status area.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>NIM_DELETE: Deletes an icon from the status area.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>NIM_MODIFY: Modifies an icon in the status area.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>The values of these messages can be found in the header file,<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>Shellapi.h.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>pnid: A pointer to a NOTIFYICONDATA structure. To pass this argument to<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>the function, create a user-defined data type called NOTIFYICONDATA<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>(shown later in this section) and pass this data type by value.<o:p></o:p></pre><pre><span
+style='mso-tab-count:4'>                               </span><o:p></o:p></pre>
+
+<p class=MsoNormal><br>
+The NOTIFYICONDATA structure contains the following elements: <o:p></o:p></p>
+
+<pre><span style='mso-spacerun:yes'>   </span>cbSize: Passes the size of the NOTIFYICONDATA data type.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Data Type: Long.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Value: Use the Len function with the variable declared as this data<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>type as the argument.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>hWnd: Handle of the window used to receive the notification message.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Data Type: Long.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Value: The hWnd property of the control used to receive this message.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>uId: Identifier of the icon in the status area.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Data Type: Long.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Value: Any value within the limits of the Long data type. The sample<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>program uses vbNull.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>uFlags: Array of flags that indicate which of the other members contain<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>valid data.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Data Type: Long.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Value: Any combination of the following constants to indicate that<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>the member of this structure is valid and will be used:<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>         </span>NIF_ICON: Passing this flag indicates that the value for the<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>hIcon will be the icon that appears in the taskbar status area.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>         </span>NIF_MESSAGE: Passing this flag indicates that the uCallBackMessage<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>value will be used as the callback message.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>         </span>NIF_TIP: Passing this flag indicates that the value of szTip will<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>be used as the ToolTip for the icon in the taskbar status area.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>uCallBackMessage: Identifier of the notification message sent to the<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>window that is used to receive the messages.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Data Type: Long.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Value: The message used to identify that a mouse event has occurred<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>within the rectangular boundaries of the icon in the taskbar status<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>area.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>hIcon: Handle of the icon that is displayed in the taskbar status area.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Data Type: Long.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Value: The image that will be used as an icon in the taskbar status<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>area. This can be the icon property of a control, an image from an<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>image control, or any icon image.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>szTip: String to be used as the ToolTip text.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Data Type: Fixed-length string 64 bytes long.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Value: Any null-terminated string under 64 bytes.<o:p></o:p></pre><pre><span
+style='mso-tab-count:4'>                               </span><o:p></o:p></pre>
+
+<p class=MsoNormal><br>
+The next section explains how to use this function in a sample program to
+manipulate icons in the taskbar status area. <o:p></o:p></p>
+
+<h3>The Sample Program<o:p></o:p></h3>
+
+<p class=MsoNormal>The sample program consists of a form containing two command
+buttons and the common dialog box control. When you click Add Icon, you set the
+values of the NOTIFYICONDATA data type. In this data type, you set the following
+values: <o:p></o:p></p>
+
+<pre><span style='mso-spacerun:yes'>   </span>cbSize: The length of the variable that uses the Len function.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>hWnd: The handle of the window used to receive the callback messages. In<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>the sample program, the form is used as the window to receive the<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>messages.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>uId: The icon identifier. Although you can use any number, the sample<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>program uses the vbNull constants.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>uFlags: Array flags indicate what members of this structure are valid.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>The sample program uses all the flags for maximum versatility.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>uCallBackMessage: The message that is sent when mouse activity occurs on<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>the icon in the taskbar status tray. The mouse message that is sent maps<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>to a mouse event in the control specified in the hWnd value. You should<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>use a mouse message that can handle the messages exclusively. For<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>example, the sample program uses the WM_MOUSEMOVE message because this<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>message maps to the MouseMove event of the form. Rarely used in its<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>intended form, the MouseMove event is a suitable event for this purpose.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>hIcon: The icon that is to be displayed in the taskbar status area. The<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>sample program uses the form icon.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>   </span>szTip: The ToolTip string. The string must be terminated with a null<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>   </span>character so the vbNullChar constant is concatenated to the string.<o:p></o:p></pre><pre><span
+style='mso-tab-count:2'>               </span><span style='mso-tab-count:2'>               </span><o:p></o:p></pre>
+
+<p class=MsoNormal><br>
+After setting the data, you then call the Shell_NotifyIcon function and pass
+the NOTIFYICONDATA along with a message to add the icon to the taskbar status
+area. <br>
+<br>
+When you pass the mouse pointer over the icon in the taskbar status area, the
+form receives the message WM_MOUSEMOVE. This message maps to the form's
+MouseMove event. The X argument is the product of one of the mouse constants
+that indicates the mouse input (such as a left-click, right-click,
+single-click, or double-click) and the TwipsPerPixelX property of the screen.
+The mouse input is produced by dividing the X argument with this property. The
+mouse input is then used in a Select Case statement to execute a series of
+instructions. <br>
+<br>
+For example, when you double-click the icon, the common dialog box appears and
+allows you to select a different icon. The hIcon value of the NOTIFYICONDATA
+data type is changed to the new icon. The Shell_NotifyIcon function is called
+with the new data type and a message to modify the icon in the taskbar status area.
+<br>
+<br>
+If you right-click the icon, you execute the InputBox function that changes the
+ToolTip text. The new string is null terminated with the vbNullChar constant
+and the szTip value is changed to the new string. The Shell_NotifyIcon function
+is called with the new NOTIFYICONDATA data and a message to modify the icon. <br>
+<br>
+When you click Delete Icon or exit the application, the Shell_NotifyIcon
+function is called with a message to delete the icon. <o:p></o:p></p>
+
+<h3>Steps To Create Sample Program<o:p></o:p></h3>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>1.<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Start Visual Basic. If it is already running, go to the
+  File menu and click New Project. <o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>2.<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Place two CommandButtons and a common dialog box control
+  on Form1. <o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>3.<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Copy the following code to the Form1 code window:<code><span
+  style='font-size:10.0pt'><o:p></o:p></span></code></p>
+  <pre><span style='mso-spacerun:yes'>      </span>'Declare a user-defined variable to pass to the Shell_NotifyIcon<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'function.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Type NOTIFYICONDATA<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>cbSize As Long<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>hWnd As Long<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>uId As Long<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>uFlags As Long<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>uCallBackMessage As Long<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>hIcon As Long<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>szTip As String * 64<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>End Type<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'Declare the constants for the API function. These constants can be<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'found in the header file Shellapi.h.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'The following constants are the messages sent to the<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'Shell_NotifyIcon function to add, modify, or delete an icon from the<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'taskbar status area.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Const NIM_ADD = &amp;H0<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Const NIM_MODIFY = &amp;H1<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Const NIM_DELETE = &amp;H2<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'The following constant is the message sent when a mouse event occurs<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'within the rectangular boundaries of the icon in the taskbar status<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'area.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Const WM_MOUSEMOVE = &amp;H200<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'The following constants are the flags that indicate the valid<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'members of the NOTIFYICONDATA data type.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Const NIF_MESSAGE = &amp;H1<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Const NIF_ICON = &amp;H2<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Const NIF_TIP = &amp;H4<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'The following constants are used to determine the mouse input on the<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'the icon in the taskbar status area.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'Left-click constants.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Const WM_LBUTTONDBLCLK = &amp;H203<span style='mso-spacerun:yes'>   </span>'Double-click<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Const WM_LBUTTONDOWN = &amp;H201<span style='mso-spacerun:yes'>     </span>'Button down<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Const WM_LBUTTONUP = &amp;H202<span style='mso-spacerun:yes'>       </span>'Button up<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'Right-click constants.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Const WM_RBUTTONDBLCLK = &amp;H206<span style='mso-spacerun:yes'>   </span>'Double-click<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Const WM_RBUTTONDOWN = &amp;H204<span style='mso-spacerun:yes'>     </span>'Button down<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Const WM_RBUTTONUP = &amp;H205<span style='mso-spacerun:yes'>       </span>'Button up<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'Declare the API function call.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Declare Function Shell_NotifyIcon Lib &quot;shell32&quot; _<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>Alias &quot;Shell_NotifyIconA&quot; _<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>(ByVal dwMessage As Long, pnid As NOTIFYICONDATA) As Boolean<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>'Dimension a variable as the user-defined data type.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Dim nid As NOTIFYICONDATA<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Sub Command1_Click()<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>'Click this button to add an icon to the taskbar status area.<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>         </span>'Set the individual values of the NOTIFYICONDATA data type.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>nid.cbSize = Len(nid)<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>nid.hWnd = Form1.hWnd<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>nid.uId = vbNull<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>nid.uFlags = NIF_ICON Or NIF_TIP Or NIF_MESSAGE<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>nid.uCallBackMessage = WM_MOUSEMOVE<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>nid.hIcon = Form1.Icon<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>nid.szTip = &quot;Taskbar Status Area Sample Program&quot; &amp; vbNullChar<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>         </span>'Call the Shell_NotifyIcon function to add the icon to the taskbar<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>'status area.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>Shell_NotifyIcon NIM_ADD, nid<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>End Sub<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Sub Command2_Click()<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>'Click this button to delete the added icon from the taskbar<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>'status area by calling the Shell_NotifyIcon function.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>Shell_NotifyIcon NIM_DELETE, nid<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>End Sub<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Sub Form_Load()<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>'Set the captions of the command button when the form loads.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>Command1.Caption = &quot;Add an Icon&quot;<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>Command2.Caption = &quot;Delete Icon&quot;<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>End Sub<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Sub Form_Terminate()<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>'Delete the added icon from the taskbar status area when the<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>'program ends.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>Shell_NotifyIcon NIM_DELETE, nid<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>End Sub<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span style='mso-spacerun:yes'>      </span>Private Sub Form_MouseMove _<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>         </span>(Button As Integer, _<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>          </span>Shift As Integer, _<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>          </span>X As Single, _<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>          </span>Y As Single)<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>          </span>'Event occurs when the mouse pointer is within the rectangular<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>          </span>'boundaries of the icon in the taskbar status area.<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>          </span>Dim msg As Long<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>          </span>Dim sFilter As String<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>          </span>msg = X / Screen.TwipsPerPixelX<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>          </span>Select Case msg<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>             </span>Case WM_LBUTTONDOWN<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>             </span>Case WM_LBUTTONUP<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>             </span>Case WM_LBUTTONDBLCLK<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>             </span>CommonDialog1.DialogTitle = &quot;Select an Icon&quot;<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>             </span>sFilter = &quot;Icon Files (*.ico)|*.ico&quot;<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>             </span>sFilter = sFilter &amp; &quot;|All Files (*.*)|*.*&quot;<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>             </span>CommonDialog1.Filter = sFilter<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>             </span>CommonDialog1.ShowOpen<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>             </span>If CommonDialog1.filename &lt;&gt; &quot;&quot; Then<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>                </span>Form1.Icon = LoadPicture(CommonDialog1.filename)<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>                </span>nid.hIcon = Form1.Icon<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>                </span>Shell_NotifyIcon NIM_MODIFY, nid<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>             </span>End If<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>             </span>Case WM_RBUTTONDOWN<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>                </span>Dim ToolTipString As String<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>                </span>ToolTipString = InputBox(&quot;Enter the new ToolTip:&quot;, _<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>                                  </span>&quot;Change ToolTip&quot;)<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>                </span>If ToolTipString &lt;&gt; &quot;&quot; Then<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>                   </span>nid.szTip = ToolTipString &amp; vbNullChar<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>                   </span>Shell_NotifyIcon NIM_MODIFY, nid<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>                </span>End If<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>             </span>Case WM_RBUTTONUP<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>             </span>Case WM_RBUTTONDBLCLK<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>          </span>End Select<o:p></o:p></pre><pre><span style='mso-spacerun:yes'>      </span>End Sub<o:p></o:p></pre><pre><o:p>&nbsp;</o:p></pre><pre><span
+  style='mso-tab-count:5'>                                      </span><o:p></o:p></pre></td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>4.<o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Press the F5 key to run the project or on the Tools menu,
+  click Run Project. Click Add Icon to add an icon to the taskbar status area. Double-click
+  the icon to change the icon. Right-click the icon to change the ToolTip
+  string. Click Delete Icon to remove the icon from the taskbar status area.<o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name=kb3>REFERENCES</a><o:p></o:p></h2>
+
+<p class=MsoNormal>&quot;Hardcore Visual Basic,&quot; Bruce McKinney, Microsoft
+Press, 1995 Microsoft Win32 SDK, Shell_NotifyIcon and NOTIFYICONDATA
+&quot;Microsoft Systems Journal,&quot; February 1996, &quot;The Visual
+Programmer,&quot; page 93, Joshua Trupin &quot;Visual Basic Programmer's
+Journal,&quot; March 1996, &quot;Q &amp; A,&quot; page 136, Carl Franklin <o:p></o:p></p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<h5>APPLIES TO<o:p></o:p></h5>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='mso-cellspacing:0in;mso-padding-alt:0in 0in 0in 0in'>
+ <tr style='mso-yfti-irow:0'>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•<o:p></o:p></p>
+  </td>
+  <td colspan=2 style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 5.0 Learning Edition<o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•<o:p></o:p></p>
+  </td>
+  <td colspan=2 style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 6.0 Learning Edition<o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•<o:p></o:p></p>
+  </td>
+  <td colspan=2 style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 5.0 Professional Edition<o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•<o:p></o:p></p>
+  </td>
+  <td colspan=2 style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 6.0 Professional Edition<o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•<o:p></o:p></p>
+  </td>
+  <td colspan=2 style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 5.0 <st1:City><st1:place>Enterprise</st1:place></st1:City>
+  Edition<o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•<o:p></o:p></p>
+  </td>
+  <td colspan=2 style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 6.0 <st1:City><st1:place>Enterprise</st1:place></st1:City>
+  Edition<o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•<o:p></o:p></p>
+  </td>
+  <td colspan=2 style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 4.0 Standard Edition<o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•<o:p></o:p></p>
+  </td>
+  <td colspan=2 style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 4.0 Professional Edition<o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>•<o:p></o:p></p>
+  </td>
+  <td colspan=2 style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>Microsoft Visual Basic 4.0 32-Bit <st1:City><st1:place>Enterprise</st1:place></st1:City>
+  Edition<o:p></o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;162613#toc#toc"><span
+  style='text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1029" type="#_x0000_t75" alt="Top of Page"
+   href="http://support.microsoft.com/default.aspx?scid=kb;en-us;162613#toc#toc"
+   style='width:7.5pt;height:7.5pt' o:button="t">
+   <v:imagedata src="How%20To%20Manipulate%20Icons%20in%20the%20System%20Tray%20with%20Visual%20Basic_files/image002.gif"
+    o:href="http://support.microsoft.com/library/images/support/kbgraphics/upArrow.gif"/>
+  </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'><img
+  border=0 width=10 height=10
+  src="How%20To%20Manipulate%20Icons%20in%20the%20System%20Tray%20with%20Visual%20Basic_files/image002.gif"
+  alt="Top of Page" align=middle v:shapes="_x0000_i1029"></span><![endif]></span></a><o:p></o:p></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a
+  href="http://support.microsoft.com/default.aspx?scid=kb;en-us;162613#toc#toc">Top
+  of Page</a><o:p></o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

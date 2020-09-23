@@ -1,0 +1,75 @@
+
+'********************************************************************
+'
+'Systray, Balloon Tool Tip add-in code to the form
+'
+'Mark Mokoski
+'markm@cmtelephone.com
+'www.cmtelephone.com
+'
+'6-NOV-2004
+'
+'********************************************************************
+'
+'********************************************************************
+'If you want the form to be in the tray on startup add this
+Private Sub Form_Load()
+    Call SystrayOn(Me, "Put your tool text tip here")
+    
+End Sub
+'********************************************************************
+'Add this to resize event to hide in tray on minimize
+Private Sub Form_Resize()
+
+    If Me.WindowState = vbMinimized Then
+        Call SystrayOn(Me, "Put your tool text tip here")
+    End If
+
+End Sub
+'********************************************************************
+'If you don't remove icon from tray on double click show, add this
+'good idea 
+Private Sub Form_Terminate()
+Call SystrayOff(Me)
+
+End Sub
+
+Private Sub Form_Unload(Cancel As Integer)
+Call SystrayOff(Me)
+
+End Sub
+'*********************************************************************
+'Add this event code to repond to mouse over and clicks on icon in the tray
+Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+    Static lngMsg As Long
+    Dim blnflag As Boolean, lngResult As Long
+    
+    lngMsg = X / Screen.TwipsPerPixelX
+
+    If blnflag = False Then
+
+        blnflag = True
+        
+        Select Case lngMsg
+        Case WM_RBUTTONCLK      'to popup menu on right-click
+            Call SetForegroundWindow(Me.hWnd)
+            Call RemoveBalloon(Me)
+	    'Reference the menu object of the form below for popup 
+            PopupMenu Me.menuObject
+
+        Case WM_LBUTTONDBLCLK   'SHow form on left-dblclick
+	    'Use line below if you want to remove tray icon on dbclick show form.
+	    'If not, be sure to put Systrayoff in form unload and terminate events.
+            'Call SystrayOff(Me)
+            Call SetForegroundWindow(Me.hWnd)
+            Call RemoveBalloon(Me)
+            Me.WindowState = vbNormal
+            Me.Show
+            Me.Setfocus
+            
+        
+        blnflag = False
+        
+    End If
+    
+End Sub
